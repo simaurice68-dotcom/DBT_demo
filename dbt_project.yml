@@ -12,12 +12,12 @@ profile: 'dbt_projet'
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
+model-paths: ["dbt_projet/models"]
+analysis-paths: ["dbt_projet/analyses"]
+test-paths: ["dbt_projet/tests"]
+seed-paths: ["dbt_projet/seeds"]
+macro-paths: ["dbt_projet/macros"]
+snapshot-paths: ["dbt_projet/snapshots"]
 
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
@@ -33,5 +33,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_projet:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
